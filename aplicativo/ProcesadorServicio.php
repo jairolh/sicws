@@ -92,6 +92,11 @@ class ProcesadorServicio {
                 $this->recurso=new Necesidad($this->conexionOracle,$this->servicio,$this->miFabricaConexiones);
                 $this->recurso->rescatarNecesidad();
               break;
+              case 'disponibilidad':
+                include ("servicio/disponibilidad/disponibilidad.php");
+                $this->recurso=new Disponibilidad($this->conexionOracle,$this->servicio,$this->miFabricaConexiones);
+                $this->recurso->rescatarDisponibilidad();
+              break;          
               default://contiene sintaxis errónea
                 $this->response(400);
               break;
