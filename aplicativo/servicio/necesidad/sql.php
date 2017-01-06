@@ -2,7 +2,7 @@
 class SqlService {
 
     function sql($opcion, $variable) {
-
+        $cadenaSql='';
         switch ($opcion) {
 
                 case "consultar_vigencia":

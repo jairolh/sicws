@@ -97,6 +97,11 @@ class ProcesadorServicio {
                 $this->recurso=new Disponibilidad($this->conexionOracle,$this->servicio,$this->miFabricaConexiones);
                 $this->recurso->rescatarDisponibilidad();
               break;          
+              case 'ordenpago':
+                include ("servicio/ordenpago/ordenpago.php");
+                $this->recurso=new Ordenpago($this->conexionOracle,$this->servicio,$this->miFabricaConexiones);
+                $this->recurso->rescatarOrdenpago();
+              break;           
               default://contiene sintaxis errónea
                 $this->response(400);
               break;
