@@ -1,4 +1,19 @@
 <?php
+/* * *************************************************************************
+ * @name sql.php
+ * @author Jairo Lavado Hernandez
+ * @revision Última revisión 10 de Enero de 2017
+ * ***************************************************************************
+ * @subpackage
+ * @package clase
+ * @copyright
+ * @version 0.1
+ * @author Jairo Lavado Hernández
+ * @link http://computo.udistrital.edu.co
+ * @description Esta clase esta disennada para administrar todas las consultas SQL
+ * relacionadas a los servicios relacionados con las ordenes de pago en el
+ * sistema Sicapital
+ * **************************************************************************** */
 class SqlService {
 
     function sql($opcion, $variable) {

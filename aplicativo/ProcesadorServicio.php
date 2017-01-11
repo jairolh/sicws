@@ -1,4 +1,20 @@
 <?php
+/* * *************************************************************************
+ * @name ProcesadorServicio.php
+ * @author Jairo Lavado Hernandez
+ * @revision Última revisión 10 de Enero de 2017
+ * ***************************************************************************
+ * @subpackage
+ * @package clase
+ * @copyright
+ * @version 0.3
+ * @author Jairo Lavado Hernández
+ * @link http://computo.udistrital.edu.co
+ * @description Esta clase esta disennada para administrar todas las tareas
+ * relacionadas al direccionamiento de los diferentes servicios del
+ * sistema Sicapital
+ * **************************************************************************** */
+
 require_once ("DatoConexion.php");
 require_once ("../conexion/FabricaDbConexion.class.php");
 class ProcesadorServicio {
@@ -24,7 +40,7 @@ class ProcesadorServicio {
             $datosConexion = new DatoConexion ();
             $datosConexion->setDatosConexion ( "oracle" );
             $this->miFabricaConexiones->setRecursoDB ( "oracle", $datosConexion );
-            $this->conexionOracle = $this->miFabricaConexiones->getRecursoDB ( "oracle" );		
+            $this->conexionOracle = $this->miFabricaConexiones->getRecursoDB ( "oracle" );	
             if (! $this->conexionOracle) {
                 error_log ('NO SE CONECTO A ORACLE' );
                 //Si no se puede realizar la conexión
@@ -101,7 +117,12 @@ class ProcesadorServicio {
                 include ("servicio/ordenpago/ordenpago.php");
                 $this->recurso=new Ordenpago($this->conexionOracle,$this->servicio,$this->miFabricaConexiones);
                 $this->recurso->rescatarOrdenpago();
-              break;           
+              break;  
+              case 'tercero':
+                include ("servicio/tercero/tercero.php");
+                $this->recurso=new Tercero($this->conexionOracle,$this->servicio,$this->miFabricaConexiones);
+                $this->recurso->rescatarTercero();
+              break;            
               default://contiene sintaxis errónea
                 $this->response(400);
               break;

@@ -1,5 +1,19 @@
 <?php
-//require_once ("../../connection/FabricaDbConexion.class.php");
+/* * *************************************************************************
+ * @name necesidad.php
+ * @author Jairo Lavado Hernandez
+ * @revision Última revisión 10 de Enero de 2017
+ * ***************************************************************************
+ * @subpackage
+ * @package clase
+ * @copyright
+ * @version 0.1
+ * @author Jairo Lavado Hernández
+ * @link http://computo.udistrital.edu.co
+ * @description Esta clase esta disennada para administrar todas las funciones
+ * relacionadas a los servicios relacionados con las necesidades en el
+ * sistema Sicapital
+ * **************************************************************************** */
 class Necesidad {
 
 	var $conexionOracle;

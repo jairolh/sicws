@@ -1,9 +1,18 @@
 <?php
-/**
- * Description of SicapitalAPI
- *
- * @author jlavadoh
- */
+/* * *************************************************************************
+ * @name sicapitaAPI.php
+ * @author Jairo Lavado Hernandez
+ * @revision Última revisión 10 de Enero de 2017
+ * ***************************************************************************
+ * @subpackage
+ * @package clase
+ * @copyright
+ * @version 0.1
+ * @author Jairo Lavado Hernández
+ * @link http://computo.udistrital.edu.co
+ * @description Esta clase esta disennada para administrar todas las peticiones
+ * relacionadas con los servicios de consulta en el Sistema Sicapital
+ * **************************************************************************** */
 class SicapitalAPI {
     public function API(){
         header('Content-Type: application/JSON');                

@@ -1,6 +1,6 @@
 <?php
 /* * *************************************************************************
- * @name disponibilidad.php
+ * @name tercero.php
  * @author Jairo Lavado Hernandez
  * @revision Última revisión 10 de Enero de 2017
  * ***************************************************************************
@@ -10,11 +10,12 @@
  * @version 0.1
  * @author Jairo Lavado Hernández
  * @link http://computo.udistrital.edu.co
- * @description Esta clase esta disennada para administrar todas las funciones
- * relacionadas a los servicios relacionados con las disponibilidades presupuestales en el
+ * @description Esta clase esta disennada para administrar todas las tareas
+ * relacionadas a los servicios relacionados con terceros en el
  * sistema Sicapital
  * **************************************************************************** */
-class Disponibilidad {
+
+class Tercero {
 
 	var $conexionOracle;
 	var $mensajeError;
@@ -51,7 +52,7 @@ class Disponibilidad {
        }            
     }                 
 
-    function rescatarDisponibilidad(){
+    function rescatarTercero(){
             $parametros=array();
             //rescata los valores de los parametros
             foreach ($_GET as $key => $value) 
@@ -60,8 +61,8 @@ class Disponibilidad {
                 }
 
             switch($_GET['action'])
-                { case 'cdpnec':
-                     $cadenaSql = $this->miFabricaConexiones->getCadenaSql ($this->servicio, 'cdpxnecesidad', $parametros);
+                { case 'sel':
+                      $cadenaSql = $this->miFabricaConexiones->getCadenaSql ($this->servicio, 'basicos', $parametros);
                   break;
                   default://contiene sintaxis errónea
                       $this->response(400);

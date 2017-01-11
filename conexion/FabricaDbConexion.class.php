@@ -1,6 +1,6 @@
 <?php
 require_once ("mysql.class.php");
-require_once ("oci8.class.php");
+require_once ("Oci8.class.php");
 require_once ("pgsql.class.php");
 require_once ("Sql.class.php");
 

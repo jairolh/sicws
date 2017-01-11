@@ -20,7 +20,7 @@ class DatoConexion{
     		
     		case "oracle":
     			
-    			$this->motorDB='oci8';
+    			$this->motorDB='Oci8';
     			$this->direccionServidor='10.20.0.251';
     			$this->puerto='1521';
     			$this->db="ud";
